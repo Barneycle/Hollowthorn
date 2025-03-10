@@ -1,0 +1,9 @@
+TileMapLayer
+CollisionShape2D
+RemoteTransform2D
+Camera2D
+TileMap
+AnimationTree
+AnimationPlayer
+Sprite2D
+CharacterBody2D

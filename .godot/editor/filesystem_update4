@@ -1,0 +1,4 @@
+res://Characters/player_cat.tscn
+res://Levels/game_level.tscn
+res://Characters/player_cat.gd
+res://Levels/camera_2d.gd
