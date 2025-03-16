@@ -1,6 +1,8 @@
 CollisionShape2D
-AnimationTree
+StaticBody2D
+Area2D
 AnimationPlayer
+AnimationTree
 Sprite2D
 CharacterBody2D
 AnimatedSprite2D
