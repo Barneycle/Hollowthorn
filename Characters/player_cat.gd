@@ -12,6 +12,8 @@ func _ready():
 
 func _physics_process(_delta):
 	
+
+	
 	var input_direction = Vector2(
 		
 		Input.get_action_strength("right") - Input.get_action_strength("left"),

@@ -1,9 +1,10 @@
-TileMapLayer
 CollisionShape2D
-RemoteTransform2D
-Camera2D
-TileMap
 AnimationTree
 AnimationPlayer
 Sprite2D
 CharacterBody2D
+AnimatedSprite2D
+TileMapLayer
+RemoteTransform2D
+Camera2D
+TileMap
