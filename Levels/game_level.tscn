@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bbvdylja0nxca" path="res://Art/SYD_Main_Pack_V1/General/Tilesets/Water_Animation_Tileset.png" id="10_nxa8a"]
 [ext_resource type="Texture2D" uid="uid://qnsnhj17book" path="res://Art/SYD_Main_Pack_V1/General/Tilesets/Simly2D_Basic_Tileset.png" id="11_bskef"]
 [ext_resource type="Texture2D" uid="uid://c78ixcduh1k3h" path="res://Art/SYD_Main_Pack_V1/Mine/Tilesets/Mine_Tileset.png" id="12_bskef"]
-[ext_resource type="PackedScene" uid="uid://b3ter8os1lgep" path="res://chest.tscn" id="13_ds5vk"]
+[ext_resource type="PackedScene" uid="uid://b3ter8os1lgep" path="res://Objects/Chest/chest.tscn" id="13_ds5vk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wmi5p"]
 texture = ExtResource("2_wlvk4")
@@ -2672,31 +2672,6 @@ position = Vector2(8, -208)
 ignore_rotation = false
 zoom = Vector2(0.5, 0.5)
 
-[node name="Spectre" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-position = Vector2(1, -79)
-script = null
-
 [node name="chest" parent="." groups=["player"] instance=ExtResource("13_ds5vk")]
-position = Vector2(69, -175)
-scale = Vector2(0.0793884, 0.10582)
-
-[node name="chest2" parent="." groups=["player"] instance=ExtResource("13_ds5vk")]
-position = Vector2(69, -141)
-scale = Vector2(0.0793884, 0.10582)
-
-[node name="chest3" parent="." groups=["player"] instance=ExtResource("13_ds5vk")]
-position = Vector2(69, -203)
-scale = Vector2(0.0793884, 0.10582)
-
-[node name="chest4" parent="." groups=["player"] instance=ExtResource("13_ds5vk")]
-position = Vector2(69, -235)
-scale = Vector2(0.0793884, 0.10582)
+position = Vector2(60.855, -165.5)
+scale = Vector2(0.0619164, 0.089947)
