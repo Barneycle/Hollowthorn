@@ -1,22 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b3ter8os1lgep"]
 
-[ext_resource type="Texture2D" uid="uid://cdtkrwcsl26ao" path="res://deqryw4-2afb9fa4-bec8-4dab-b4f4-b622d5ba8a74.png" id="1_twpm2"]
-[ext_resource type="Script" uid="uid://ccn0bwtuq0ekn" path="res://chest.gd" id="2_8uwsg"]
-
-[sub_resource type="Animation" id="Animation_twpm2"]
-resource_name = "chest_opening"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2i(0, 0), Vector2i(0, 2)]
-}
+[ext_resource type="Texture2D" uid="uid://cdtkrwcsl26ao" path="res://Objects/Chest/deqryw4-2afb9fa4-bec8-4dab-b4f4-b622d5ba8a74.png" id="1_twpm2"]
+[ext_resource type="Script" uid="uid://ccn0bwtuq0ekn" path="res://Objects/Chest/chest.gd" id="2_8uwsg"]
 
 [sub_resource type="Animation" id="Animation_8uwsg"]
 length = 0.001
@@ -48,6 +33,21 @@ tracks/0/keys = {
 "values": [Vector2i(0, 2), Vector2i(0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_twpm2"]
+resource_name = "chest_opening"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(0, 2)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_trlyu"]
 _data = {
 &"RESET": SubResource("Animation_8uwsg"),
@@ -72,19 +72,18 @@ script = ExtResource("2_8uwsg")
 libraries = {
 &"": SubResource("AnimationLibrary_trlyu")
 }
+speed_scale = 2.5
 
 [node name="ProximityDetectr" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProximityDetectr"]
 position = Vector2(-59.3682, 9.44999)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_bp1or")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-65.305, 9.45)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8uwsg")
 
 [connection signal="body_entered" from="ProximityDetectr" to="." method="_on_Area2D_body_entered"]

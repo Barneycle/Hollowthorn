@@ -1,21 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742138038
-deqryw4-2afb9fa4-bec8-4dab-b4f4-b622d5ba8a74.png::CompressedTexture2D::5023269763488429266::1742138038::1742138050::1::::<><><>0<>0<>827a4352631dc1d4a1cc4be53bcf7e66<>res://.godot/imported/deqryw4-2afb9fa4-bec8-4dab-b4f4-b622d5ba8a74.png-f5644a7387f5cb7b0699fb71583218b4.ctex::
-icon.svg::CompressedTexture2D/CompressedTexture2D::754716400277855554::1742137833::1742137939::1::::<><><>0<>0<>bcb988f76717db35e09667a4a1d64318<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://::1742274538
 nest-of-thorns-final-boss-15512.jpg::CompressedTexture2D/CompressedTexture2D::4359123136576552347::1742137833::1742137940::1::::<><><>0<>0<>b201f3e96d299b0701f570861011267f<>res://.godot/imported/nest-of-thorns-final-boss-15512.jpg-183a3e0fbcf469eccf4265e849fbeafa.ctex::
-::res://Art/::1742137940
+::res://Art/::1742274252
 BIRDSPRITESHEET_Blue.png::CompressedTexture2D/CompressedTexture2D::8210636401754312149::1742137832::1742137940::1::::<><><>0<>0<>a286b4ebe68ad7eb49ae5cfb851aeb4d<>res://.godot/imported/BIRDSPRITESHEET_Blue.png-7240d12bd999a53dcf04ea107ee88ba0.ctex::
 CATSPRITESHEET_Orange.png::CompressedTexture2D/CompressedTexture2D::375866944454221838::1742137832::1742137939::1::::<><><>0<>0<>df6803be0c9315c117bdbeaff3977fe3<>res://.godot/imported/CATSPRITESHEET_Orange.png-a12e6428167d95743d9e9c91faee74a5.ctex::
 FOXSPRITESHEET.png::CompressedTexture2D/CompressedTexture2D::489970982227513131::1742137832::1742137939::1::::<><><>0<>0<>b4d3acc2c8640090f42ae49ae0daf37a<>res://.godot/imported/FOXSPRITESHEET.png-31a53859d3262edb405f3ed6cf20857d.ctex::
+icon.svg::CompressedTexture2D/CompressedTexture2D::754716400277855554::1742137833::1742274252::1::::<><><>0<>0<>61206831005505898b880cff4e01610a<>res://.godot/imported/icon.svg-750f30f6912a3e29e1f50a8e1a7e4a3e.ctex::
 RACCOONSPRITESHEET.png::CompressedTexture2D/CompressedTexture2D::6928784628073810626::1742137832::1742137939::1::::<><><>0<>0<>8ffb2b1d8bd24c750d2ae3b215db1ad7<>res://.godot/imported/RACCOONSPRITESHEET.png-730e675bd52c14c514132ed3cfe6780e.ctex::
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/::1742137942
 COUPON.png::CompressedTexture2D/CompressedTexture2D::7850775800529174094::1742137832::1742137942::1::::<><><>0<>0<>849fa675971b0bd5f5cd5ac5227badc9<>res://.godot/imported/COUPON.png-f9c2cf76c4dea22b6c74b1cc67aeb6d9.ctex::
-License.txt::TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
-readme.txt::TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
+readme.txt::TextFile/TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/__MACOSX/::1742137928
 ._COUPON.png::CompressedTexture2D/CompressedTexture2D::2443120167520566115::1742137832::1742137928::0::::<><><>0<>0<>350c633ab366bba992cdfb655966aeef<>::
-._License.txt::TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
-._readme.txt::TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
+._License.txt::TextFile/TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
+._readme.txt::TextFile/TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/__MACOSX/ASEPRITE/::1742137832
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/__MACOSX/ASEPRITE/Vampires1/::1742137832
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/__MACOSX/ASEPRITE/Vampires1/Attack/::1742137832
@@ -418,12 +417,12 @@ Vampires3_Walk_full.png::CompressedTexture2D/CompressedTexture2D::53067685144915
 Vampires3_Walk_head.png::CompressedTexture2D/CompressedTexture2D::8876476607413611181::1742137832::1742137941::1::::<><><>0<>0<>e7a5d4b551632425db9b40d5a24ce595<>res://.godot/imported/Vampires3_Walk_head.png-cb6f8994d8f056b607110e9aa5dff9d1.ctex::
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/::1742137946
 COUPON.png::CompressedTexture2D/CompressedTexture2D::2230534921058730476::1742137832::1742137946::1::::<><><>0<>0<>d9d04aaa64efaf2bfb672322c8ed67d6<>res://.godot/imported/COUPON.png-1f90e16e96e4467ca3ee3a053b8e272b.ctex::
-License.txt::TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
-readme.txt::TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
+readme.txt::TextFile/TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/__MACOSX/::1742137924
 ._COUPON.png::CompressedTexture2D/CompressedTexture2D::7396185332769256318::1742137833::1742137924::0::::<><><>0<>0<>1b800b4774b76ad12b3e85a4da9c4a66<>::
-._License.txt::TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
-._readme.txt::TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
+._License.txt::TextFile/TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
+._readme.txt::TextFile/TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/__MACOSX/ASEPRITE/::1742137833
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/__MACOSX/ASEPRITE/Orc1/::1742137833
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/__MACOSX/ASEPRITE/Orc1/Orc1_attack/::1742137833
@@ -1108,8 +1107,8 @@ orc3_walk_sword_front.png::CompressedTexture2D/CompressedTexture2D::429569612184
 shadow.png::CompressedTexture2D/CompressedTexture2D::394010900575037310::1742137833::1742137946::1::::<><><>0<>0<>2bd2c346a16b1aa2933767a7edb5ba9c<>res://.godot/imported/shadow.png-79897b0e25bdebaddad887f0df35a964.ctex::
 ::res://Art/craftpix-net-505052-free-forest-objects-top-down-pixel-art/::1742137934
 COUPON.png::CompressedTexture2D/CompressedTexture2D::6197762802153966397::1742137833::1742137934::1::::<><><>0<>0<>2eb8101226ec1c52773c0d658c904f05<>res://.godot/imported/COUPON.png-ce961677402f55379e240966b0ee8217.ctex::
-License.txt::TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
-readme.txt::TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
+readme.txt::TextFile/TextFile::-1::1742137833::0::1::::<><><>0<>0<><>::
 ::res://Art/craftpix-net-505052-free-forest-objects-top-down-pixel-art/PNG/::1742137934
 Assets_source.png::CompressedTexture2D/CompressedTexture2D::2394664260270405272::1742137833::1742137933::1::::<><><>0<>0<>65f8fa8c1647054cb5ab8fd45bbdce62<>res://.godot/imported/Assets_source.png-35ed79270f90cd9868a69939a853cdfa.ctex::
 ::res://Art/craftpix-net-505052-free-forest-objects-top-down-pixel-art/PNG/Assets/::1742137947
@@ -1398,7 +1397,7 @@ WEAPON_shield_cutout_chain_armor_helmet.png::CompressedTexture2D/CompressedTextu
 ::res://Art/lpc_entry/lpc_entry/xcf/::1742137833
 ::res://Art/Monster_Pack_Free_Character_2/::1742137832
 ::res://Art/Monster_Pack_Free_Character_2/Monster Pack Character 2 (Free)/::1742137832
-ReadMe.txt::TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
+ReadMe.txt::TextFile/TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
 ::res://Art/Monster_Pack_Free_Character_2/Monster Pack Character 2 (Free)/Spritesheets/::1742137832
 ::res://Art/Monster_Pack_Free_Character_2/Monster Pack Character 2 (Free)/Spritesheets/Arrow/::1742137932
 _Showcase_Arrow_Retro.png::CompressedTexture2D/CompressedTexture2D::6360774506035885547::1742137832::1742137932::1::::<><><>0<>0<>1318693cf57ffa318cd7c1d5b2744737<>res://.godot/imported/_Showcase_Arrow_Retro.png-1dbd053a9f8efc098b7b083e8b198d65.ctex::
@@ -1455,7 +1454,7 @@ F_Idle_1H_Sword_Retro.png::CompressedTexture2D/CompressedTexture2D::681936781694
 F_Melee_1H_Sword_Retro.png::CompressedTexture2D/CompressedTexture2D::8948751386561027984::1742137832::1742137931::1::::<><><>0<>0<>2fe87c09b151fc18f9553d7b8d6fbb71<>res://.godot/imported/F_Melee_1H_Sword_Retro.png-e0ac3992fa9cafd2fc6b356b0ea4414a.ctex::
 F_Move_1H_Sword_Retro.png::CompressedTexture2D/CompressedTexture2D::554141846109316670::1742137832::1742137931::1::::<><><>0<>0<>26332aa4f5f2b0acc139b78ad0f4de87<>res://.godot/imported/F_Move_1H_Sword_Retro.png-3cde4474492ff45237cc70a2d5fc4240.ctex::
 ::res://Art/Pixel Art Top Down - Basic v1.1.2/::1742137832
-Changelog.txt::TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
+Changelog.txt::TextFile/TextFile::-1::1742137832::0::1::::<><><>0<>0<><>::
 ::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/::1742137932
 TX Plant.png::CompressedTexture2D/CompressedTexture2D::1933864259348806973::1742137832::1742137932::1::::<><><>0<>0<>053a54003ad981bea52bac892bc6a47f<>res://.godot/imported/TX Plant.png-37a179ba7c173bd0c26a73288235b72b.ctex::
 TX Player.png::CompressedTexture2D/CompressedTexture2D::7110415748356492755::1742137832::1742137931::1::::<><><>0<>0<>b6e1cda9536cf43156aab4fea2103103<>res://.godot/imported/TX Player.png-09948f034392fcf32d9539f378378c4b.ctex::
@@ -1789,14 +1788,19 @@ Right idle.png::CompressedTexture2D/CompressedTexture2D::8384653025712359837::17
 RightRun.png::CompressedTexture2D/CompressedTexture2D::7227697307175635176::1742137832::1742137940::1::::<><><>0<>0<>30cc7492baa8896f036d3480dda14928<>res://.godot/imported/RightRun.png-08769e3e62c475b3e5031f76386fb8f9.ctex::
 ::res://Art/Top Down Pixel art Free Character/Top Down Pixel art Free Character/South Run/::1742137940
 South Run.png::CompressedTexture2D/CompressedTexture2D::4146769993883526031::1742137832::1742137940::1::::<><><>0<>0<>c7fe52beefdac349f925ce1fbd543fad<>res://.godot/imported/South Run.png-19c5a3f812bbab5d76adbbd972ce3d69.ctex::
-::res://Characters/::1742137833
-player_cat.gd::GDScript::4570249253593935785::1742137833::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player_cat.tscn::PackedScene::6254727463072421336::1742137833::0::1::::<><><>0<>0<><>::uid://fmcqds0lfq7w::::res://Art/CATSPRITESHEET_Orange.png<>res://Characters/player_cat.gd
-::res://Enemies/::1742137833
-enemy_1.tscn::PackedScene::6024264754046285546::1742137833::0::1::::<><><>0<>0<><>::uid://byxvpctadcu65::::res://Spectre_14_Move.png<>uid://sjw601qe7orh::::res://Spectre_14_Attack.png
+::res://Characters/::1742274172
+player_cat.gd::GDScript/GDScript::4570249253593935785::1742137833::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_cat.tscn::PackedScene/PackedScene::6254727463072421336::1742274172::0::1::::<><><>0<>0<><>::uid://fmcqds0lfq7w::::res://Art/CATSPRITESHEET_Orange.png<>uid://b6d4lqeriogd2::::res://Characters/player_cat.gd
+::res://Enemies/::1742274172
+enemy_1.tscn::PackedScene/PackedScene::6024264754046285546::1742274172::0::1::::<><><>0<>0<><>::uid://byxvpctadcu65::::res://Enemies/SpritesheetsEnemy/Spectre_14_Move.png<>uid://sjw601qe7orh::::res://Enemies/SpritesheetsEnemy/Spectre_14_Attack.png
 ::res://Enemies/SpritesheetsEnemy/::1742137940
-Spectre_14_Attack.png::CompressedTexture2D::1283371072705289921::1742137833::1742137940::1::::<><><>0<>0<>1be3de2c1125a9e3630d720afc619659<>res://.godot/imported/Spectre_14_Attack.png-a3926a48225c6dafdd67244de28426bb.ctex::
-Spectre_14_Move.png::CompressedTexture2D::4119735597508018316::1742137833::1742137940::1::::<><><>0<>0<>093438f2d6285d7cc193f93563dfb946<>res://.godot/imported/Spectre_14_Move.png-a47866c84b01deb24637dcb328843c0b.ctex::
-Spectre_14_Projectile.png::CompressedTexture2D::1994632457169845327::1742137833::1742137939::1::::<><><>0<>0<>ad35024f6a39ecee7088543add53ae3a<>res://.godot/imported/Spectre_14_Projectile.png-52deff93acacbd024dddb0d5f4658b20.ctex::
-::res://Levels/::1742137833
-game_level.tscn::PackedScene::4945112368367374504::1742137833::0::1::::<><><>0<>0<><>::uid://cvd3phketr065::::res://Characters/player_cat.tscn<>uid://dxaea2hsr6uvr::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Stone Ground.png<>uid://b27epbjhwdh5i::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Wall.png<>uid://bisyd2j3fpdij::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Struct.png<>uid://cq4puv6qm2suq::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png<>uid://c8klrj4j4q0fv::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Player.png<>uid://2s1px382815b::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant.png<>uid://b6dux17ob2o2::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Grass.png<>uid://d2tl833hk7ylp::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Shadow.png<>uid://bbvdylja0nxca::::res://Art/SYD_Main_Pack_V1/General/Tilesets/Water_Animation_Tileset.png<>uid://qnsnhj17book::::res://Art/SYD_Main_Pack_V1/General/Tilesets/Simly2D_Basic_Tileset.png<>uid://c78ixcduh1k3h::::res://Art/SYD_Main_Pack_V1/Mine/Tilesets/Mine_Tileset.png<>uid://dgxto15ub1oji::::res://Enemies/spectre.tscn
+Spectre_14_Attack.png::CompressedTexture2D/CompressedTexture2D::1283371072705289921::1742137833::1742137940::1::::<><><>0<>0<>1be3de2c1125a9e3630d720afc619659<>res://.godot/imported/Spectre_14_Attack.png-a3926a48225c6dafdd67244de28426bb.ctex::
+Spectre_14_Move.png::CompressedTexture2D/CompressedTexture2D::4119735597508018316::1742137833::1742137940::1::::<><><>0<>0<>093438f2d6285d7cc193f93563dfb946<>res://.godot/imported/Spectre_14_Move.png-a47866c84b01deb24637dcb328843c0b.ctex::
+Spectre_14_Projectile.png::CompressedTexture2D/CompressedTexture2D::1994632457169845327::1742137833::1742137939::1::::<><><>0<>0<>ad35024f6a39ecee7088543add53ae3a<>res://.godot/imported/Spectre_14_Projectile.png-52deff93acacbd024dddb0d5f4658b20.ctex::
+::res://Levels/::1742274518
+game_level.tscn::PackedScene::4945112368367374504::1742274518::0::1::::<><><>0<>0<><>::uid://cvd3phketr065::::res://Characters/player_cat.tscn<>uid://dxaea2hsr6uvr::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Stone Ground.png<>uid://b27epbjhwdh5i::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Wall.png<>uid://bisyd2j3fpdij::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Struct.png<>uid://cq4puv6qm2suq::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png<>uid://c8klrj4j4q0fv::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Player.png<>uid://2s1px382815b::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant.png<>uid://b6dux17ob2o2::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Grass.png<>uid://d2tl833hk7ylp::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Shadow.png<>uid://bbvdylja0nxca::::res://Art/SYD_Main_Pack_V1/General/Tilesets/Water_Animation_Tileset.png<>uid://qnsnhj17book::::res://Art/SYD_Main_Pack_V1/General/Tilesets/Simly2D_Basic_Tileset.png<>uid://c78ixcduh1k3h::::res://Art/SYD_Main_Pack_V1/Mine/Tilesets/Mine_Tileset.png<>uid://b3ter8os1lgep::::res://Objects/Chest/chest.tscn
+::res://Objects/::1742274495
+::res://Objects/Chest/::1742274495
+chest.gd::GDScript/GDScript::4941576861874174969::1742138654::0::1::::<>Sprite2D<><>0<>0<><>::
+chest.tscn::PackedScene::4391206465103431015::1742274495::0::1::::<><><>0<>0<><>::uid://cdtkrwcsl26ao::::res://Objects/Chest/deqryw4-2afb9fa4-bec8-4dab-b4f4-b622d5ba8a74.png<>uid://ccn0bwtuq0ekn::::res://Objects/Chest/chest.gd
+deqryw4-2afb9fa4-bec8-4dab-b4f4-b622d5ba8a74.png::CompressedTexture2D/CompressedTexture2D::5023269763488429266::1742138038::1742274495::1::::<><><>0<>0<>16e1ce0235921d72ab32efbb47919eb5<>res://.godot/imported/deqryw4-2afb9fa4-bec8-4dab-b4f4-b622d5ba8a74.png-3ecbab0027b71c8994ab33fec38c9717.ctex::
