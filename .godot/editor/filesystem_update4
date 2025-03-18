@@ -1,5 +1,3 @@
-res://chest.tscn
 res://Levels/game_level.tscn
 res://Characters/player_cat.tscn
-res://Enemies/enemy_1.tscn
-res://Objects/Chest/chest.tscn
+res://Characters/creep.tscn

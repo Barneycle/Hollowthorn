@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://ccppjpvbpybem"]
+[gd_scene load_steps=29 format=4 uid="uid://ccppjpvbpybem"]
 
 [ext_resource type="PackedScene" uid="uid://cvd3phketr065" path="res://Characters/player_cat.tscn" id="1_up8ek"]
 [ext_resource type="Texture2D" uid="uid://dxaea2hsr6uvr" path="res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Stone Ground.png" id="2_wlvk4"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bbvdylja0nxca" path="res://Art/SYD_Main_Pack_V1/General/Tilesets/Water_Animation_Tileset.png" id="10_nxa8a"]
 [ext_resource type="Texture2D" uid="uid://qnsnhj17book" path="res://Art/SYD_Main_Pack_V1/General/Tilesets/Simly2D_Basic_Tileset.png" id="11_bskef"]
 [ext_resource type="Texture2D" uid="uid://c78ixcduh1k3h" path="res://Art/SYD_Main_Pack_V1/Mine/Tilesets/Mine_Tileset.png" id="12_bskef"]
-[ext_resource type="PackedScene" uid="uid://b3ter8os1lgep" path="res://Objects/Chest/chest.tscn" id="13_ds5vk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wmi5p"]
 texture = ExtResource("2_wlvk4")
@@ -2671,7 +2670,3 @@ tile_set = SubResource("TileSet_wlvk4")
 position = Vector2(8, -208)
 ignore_rotation = false
 zoom = Vector2(0.5, 0.5)
-
-[node name="chest" parent="." groups=["player"] instance=ExtResource("13_ds5vk")]
-position = Vector2(60.855, -165.5)
-scale = Vector2(0.0619164, 0.089947)

@@ -247,7 +247,7 @@ hframes = 4
 vframes = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 2)
+position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_k8dsg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
