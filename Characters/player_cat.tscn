@@ -3,9 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://fmcqds0lfq7w" path="res://Art/CATSPRITESHEET_Orange.png" id="1_k8dsg"]
 [ext_resource type="Script" uid="uid://b6d4lqeriogd2" path="res://Characters/player_cat.gd" id="1_u0lhy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k8dsg"]
-radius = 5.0
-height = 20.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0lhy"]
+size = Vector2(9, 9)
 
 [sub_resource type="Animation" id="Animation_hhb2n"]
 length = 0.001
@@ -238,7 +237,7 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_qwdhh")
 states/Walk/position = Vector2(693, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_10mfh"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_t8sd1"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_nf2gw")]
 
-[node name="PlayerCat" type="CharacterBody2D"]
+[node name="PlayerCat" type="CharacterBody2D" groups=["player_cat"]]
 script = ExtResource("1_u0lhy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -247,8 +246,8 @@ hframes = 4
 vframes = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
-shape = SubResource("CapsuleShape2D_k8dsg")
+position = Vector2(0.5, 6.5)
+shape = SubResource("RectangleShape2D_u0lhy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -260,3 +259,7 @@ tree_root = SubResource("AnimationNodeStateMachine_0nvui")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="shoot_timer" type="Timer" parent="." groups=["player_cat"]]
+wait_time = 0.8
+autostart = true

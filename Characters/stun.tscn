@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=3 uid="uid://wnbw3yf0ldw5"]
+
+[ext_resource type="Script" uid="uid://ct7hkhrr31u2r" path="res://Characters/stun.gd" id="1_ftipb"]
+[ext_resource type="Texture2D" uid="uid://bghyy2kjlivlm" path="res://Art/500 Bullet 24x24 Free/Bullet 24x24 Free  Part 1B.png" id="2_ecbl4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sulxn"]
+atlas = ExtResource("2_ecbl4")
+region = Rect2(384, 240, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ij526"]
+atlas = ExtResource("2_ecbl4")
+region = Rect2(408, 240, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76pwl"]
+atlas = ExtResource("2_ecbl4")
+region = Rect2(432, 240, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nc8k"]
+atlas = ExtResource("2_ecbl4")
+region = Rect2(456, 240, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfm61"]
+atlas = ExtResource("2_ecbl4")
+region = Rect2(480, 240, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tageg"]
+atlas = ExtResource("2_ecbl4")
+region = Rect2(504, 240, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfxga"]
+atlas = ExtResource("2_ecbl4")
+region = Rect2(528, 240, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyw7e"]
+atlas = ExtResource("2_ecbl4")
+region = Rect2(552, 240, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wl3kn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sulxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij526")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76pwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nc8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfm61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tageg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfxga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyw7e")
+}],
+"loop": true,
+"name": &"stun",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qto5w"]
+
+[node name="stun" type="Area2D"]
+script = ExtResource("1_ftipb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wl3kn")
+animation = &"stun"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_qto5w")

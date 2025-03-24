@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://yvot34k4dgdm"
+path="res://.godot/imported/Bullet 24x24 Part 9A Free.png-d67a8df57f4ec4921732f3e0a8519d66.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Art/500 Bullet 24x24 Free/Bullet 24x24 Part 9A Free.png"
+dest_files=["res://.godot/imported/Bullet 24x24 Part 9A Free.png-d67a8df57f4ec4921732f3e0a8519d66.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

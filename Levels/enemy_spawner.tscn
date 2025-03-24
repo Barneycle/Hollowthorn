@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://fjgigd772ryd"]
+
+[ext_resource type="Script" uid="uid://e00hbbvgi0gy" path="res://Levels/enemy_spawner.gd" id="1_jq70r"]
+[ext_resource type="PackedScene" uid="uid://7qdp2xi0pytr" path="res://Characters/orc_melee.tscn" id="2_6et8o"]
+[ext_resource type="Script" uid="uid://cciu4er6viqws" path="res://Levels/spawn_info.gd" id="2_8ktdo"]
+
+[sub_resource type="Resource" id="Resource_vjnd3"]
+script = ExtResource("2_8ktdo")
+time_start = 0
+time_end = 60
+enemy = ExtResource("2_6et8o")
+enemy_num = 1
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://cciu4er6viqws"
+
+[node name="EnemySpawner" type="Node2D" groups=["player_cat", "water_zones"]]
+script = ExtResource("1_jq70r")
+spawns = Array[ExtResource("2_8ktdo")]([SubResource("Resource_vjnd3")])
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

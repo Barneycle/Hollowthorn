@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs5sy6c4apli8"]
+
+[ext_resource type="Script" uid="uid://dynfm8hrwlnb4" path="res://Levels/label.gd" id="1_t80aa"]
+
+[sub_resource type="SystemFont" id="SystemFont_t80aa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t80aa"]
+font = SubResource("SystemFont_t80aa")
+
+[node name="label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_t80aa")
+script = ExtResource("1_t80aa")
