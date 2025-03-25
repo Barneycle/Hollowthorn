@@ -1,6 +1,5 @@
 res://Levels/game_level.tscn
 res://Levels/enemy_spawner.gd
-res://Characters/player_cat.gd
 res://Characters/player_cat.tscn
 res://Characters/orc_melee.tscn
 res://Levels/enemy_spawner.tscn
@@ -10,5 +9,6 @@ res://Levels/label.tscn
 res://Characters/bolt.gd
 res://Levels/label.gd
 res://Characters/orc_melee.gd
+res://Characters/player_cat.gd
 res://Levels/spawn_info.gd
 res://Characters/stun.gd

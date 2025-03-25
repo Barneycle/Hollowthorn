@@ -18,8 +18,8 @@ var dead = false
 var knockback_velocity: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0  
 var last_direction: String = "down"
-var stuck_timer = 0.0  # Timer to track if enemy is stuck
-var previous_position = Vector2.ZERO  # Store last position
+var stuck_timer = 0.0  
+var previous_position = Vector2.ZERO  
 
 func _ready():
 	current_hp = max_hp
@@ -34,7 +34,6 @@ func _process(_delta):
 		return
 
 	if player:
-		# Continuously update the path toward the player
 		nav_agent.target_position = player.global_position
 		
 		var distance = global_position.distance_to(player.global_position)
@@ -45,29 +44,41 @@ func _process(_delta):
 			chase_player()
 
 func chase_player():
-	if attacking or knockback_timer > 0:
+	if attacking or knockback_timer > 0 or dead:
 		return
 
 	if player:
-		# Set target position only if the path is valid
-		if nav_agent.is_target_reachable():
-			nav_agent.target_position = player.global_position
+		nav_agent.target_position = player.global_position  
 
 	var next_path_position = nav_agent.get_next_path_position()
+	
 	if next_path_position == Vector2.ZERO:
-		return  # No valid path, do not move
+		return  
 
 	var direction = (next_path_position - global_position).normalized()
 
-	# Check if moving towards an obstacle
 	if not nav_agent.is_target_reachable():
-		velocity = Vector2.ZERO  # Stop moving if path is blocked
+		nav_agent.target_position = player.global_position  
+
+	# Check if stuck
+	if global_position.distance_to(previous_position) < 1.0:
+		stuck_timer += get_process_delta_time()
+		if stuck_timer > 0.5:
+			nav_agent.target_position = player.global_position
+			velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)) * 10  
+			stuck_timer = 0.0
 	else:
-		velocity = direction * speed  # Move normally if path is clear
+		stuck_timer = 0.0  
+
+	previous_position = global_position  
+
+	if direction.length() > 0.1 and nav_agent.is_target_reachable():
+		velocity = velocity.lerp(direction * speed, 0.1)
+	else:
+		velocity = Vector2.ZERO  
 
 	move_and_slide()
 
-	# Play the correct animation based on movement direction
 	if abs(direction.x) > abs(direction.y):
 		anim.play("walk_right" if direction.x > 0 else "walk_left")
 	else:
@@ -86,6 +97,7 @@ func start_attack():
 
 	await get_tree().create_timer(attack_delay).timeout
 	attacking = false
+	chase_player()  
 
 func die():
 	if dead:
@@ -117,6 +129,8 @@ func take_damage(amount: int, knockback: Vector2):
 
 	if current_hp <= 0:
 		die()
+	else:
+		chase_player()  
 
 func show_damage_number(amount: int):
 	var damage_number_scene = preload("res://Levels/label.tscn")
@@ -152,28 +166,26 @@ func _physics_process(delta):
 	if dead or attacking or knockback_timer > 0:
 		return
 
-	# Check if navigation is finished
-	if player and not nav_agent.is_navigation_finished():
-		nav_agent.target_position = player.global_position
+	if player:
+		nav_agent.target_position = player.global_position  
 
 	var next_position = nav_agent.get_next_path_position()
 	var direction = (next_position - global_position).normalized()
 
-	# Prevent enemies from getting stuck
 	if global_position.distance_to(previous_position) < 1.0:
 		stuck_timer += delta
-		if stuck_timer > 0.5:  # If stuck for 0.5 seconds, recalculate path
+		if stuck_timer > 0.5:
 			nav_agent.target_position = player.global_position
+			velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)) * 10  
 			stuck_timer = 0.0
 	else:
-		stuck_timer = 0.0  # Reset timer if moving normally
+		stuck_timer = 0.0  
 
-	previous_position = global_position
+	previous_position = global_position  
 
-	# Ensure proper movement
 	if direction.length() > 0.1 and nav_agent.is_target_reachable():
 		velocity = velocity.lerp(direction * speed, 0.1)
 	else:
-		velocity = Vector2.ZERO  # Stop moving if path is blocked
+		velocity = Vector2.ZERO  
 
 	move_and_slide()

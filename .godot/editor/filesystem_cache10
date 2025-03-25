@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742886726
+::res://::1742946710
 icon.svg::CompressedTexture2D/CompressedTexture2D::754716400277855554::1741325411::1741325417::1::::<><><>0<>0<>bcb988f76717db35e09667a4a1d64318<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 nest-of-thorns-final-boss-15512.jpg::CompressedTexture2D/CompressedTexture2D::4359123136576552347::1741441466::1741441682::1::::<><><>0<>0<>b201f3e96d299b0701f570861011267f<>res://.godot/imported/nest-of-thorns-final-boss-15512.jpg-183a3e0fbcf469eccf4265e849fbeafa.ctex::
 ::res://Art/::1742625780
@@ -50,8 +50,8 @@ Bullet 24x24 Part 10C Free.png::CompressedTexture2D/CompressedTexture2D::2209012
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/::1742293175
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/__MACOSX/::1741326140
 ._COUPON.png::CompressedTexture2D/CompressedTexture2D::2443120167520566115::1686636866::1741326140::0::::<><><>0<>0<>350c633ab366bba992cdfb655966aeef<>::
-._License.txt::TextFile/TextFile::-1::1492212536::0::1::::<><><>0<>0<><>::
-._readme.txt::TextFile/TextFile::-1::1560997370::0::1::::<><><>0<>0<><>::
+._License.txt::TextFile::-1::1492212536::0::1::::<><><>0<>0<><>::
+._readme.txt::TextFile::-1::1560997370::0::1::::<><><>0<>0<><>::
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/__MACOSX/ASEPRITE/::1741325912
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/__MACOSX/ASEPRITE/Vampires1/::1741325913
 ::res://Art/craftpix-net-251172-free-vampire-4-direction-pixel-character-sprite-pack/__MACOSX/ASEPRITE/Vampires1/Attack/::1741325913
@@ -455,8 +455,8 @@ Vampires3_Walk_head.png::CompressedTexture2D/CompressedTexture2D::88764766074136
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/::1742293136
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/__MACOSX/::1741326138
 ._COUPON.png::CompressedTexture2D/CompressedTexture2D::7396185332769256318::1686636866::1741326138::0::::<><><>0<>0<>1b800b4774b76ad12b3e85a4da9c4a66<>::
-._License.txt::TextFile/TextFile::-1::1492212536::0::1::::<><><>0<>0<><>::
-._readme.txt::TextFile/TextFile::-1::1560997370::0::1::::<><><>0<>0<><>::
+._License.txt::TextFile::-1::1492212536::0::1::::<><><>0<>0<><>::
+._readme.txt::TextFile::-1::1560997370::0::1::::<><><>0<>0<><>::
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/__MACOSX/ASEPRITE/::1741325926
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/__MACOSX/ASEPRITE/Orc1/::1741325926
 ::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/__MACOSX/ASEPRITE/Orc1/Orc1_attack/::1741325926
@@ -1252,7 +1252,7 @@ house.png::CompressedTexture2D/CompressedTexture2D::4337917499292975329::1715594
 shop.png::CompressedTexture2D/CompressedTexture2D::1963036881945884836::1715594269::1741506226::1::::<><><>0<>0<>e8d5c3f253c2a0b56a62899478dad0fc<>res://.godot/imported/shop.png-5d3c5cc5774b0cef72fd59f94fb750a2.ctex::
 ::res://Art/Monster_Pack_Free_Character_2/::1741359697
 ::res://Art/Monster_Pack_Free_Character_2/Monster Pack Character 2 (Free)/::1741359697
-ReadMe.txt::TextFile/TextFile::-1::1709055736::0::1::::<><><>0<>0<><>::
+ReadMe.txt::TextFile::-1::1709055736::0::1::::<><><>0<>0<><>::
 ::res://Art/Monster_Pack_Free_Character_2/Monster Pack Character 2 (Free)/Spritesheets/::1741359698
 ::res://Art/Monster_Pack_Free_Character_2/Monster Pack Character 2 (Free)/Spritesheets/Arrow/::1741359982
 _Showcase_Arrow_Retro.png::CompressedTexture2D/CompressedTexture2D::6360774506035885547::1709044676::1741359982::1::::<><><>0<>0<>1318693cf57ffa318cd7c1d5b2744737<>res://.godot/imported/_Showcase_Arrow_Retro.png-1dbd053a9f8efc098b7b083e8b198d65.ctex::
@@ -1309,7 +1309,7 @@ F_Idle_1H_Sword_Retro.png::CompressedTexture2D/CompressedTexture2D::681936781694
 F_Melee_1H_Sword_Retro.png::CompressedTexture2D/CompressedTexture2D::8948751386561027984::1709044054::1741359982::1::::<><><>0<>0<>2fe87c09b151fc18f9553d7b8d6fbb71<>res://.godot/imported/F_Melee_1H_Sword_Retro.png-e0ac3992fa9cafd2fc6b356b0ea4414a.ctex::
 F_Move_1H_Sword_Retro.png::CompressedTexture2D/CompressedTexture2D::554141846109316670::1709044044::1741359982::1::::<><><>0<>0<>26332aa4f5f2b0acc139b78ad0f4de87<>res://.godot/imported/F_Move_1H_Sword_Retro.png-3cde4474492ff45237cc70a2d5fc4240.ctex::
 ::res://Art/Pixel Art Top Down - Basic v1.1.2/::1741325787
-Changelog.txt::TextFile/TextFile::-1::1729144858::0::1::::<><><>0<>0<><>::
+Changelog.txt::TextFile::-1::1729144858::0::1::::<><><>0<>0<><>::
 ::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/::1741326139
 TX Plant.png::CompressedTexture2D/CompressedTexture2D::1933864259348806973::1611037132::1741326139::1::::<><><>0<>0<>053a54003ad981bea52bac892bc6a47f<>res://.godot/imported/TX Plant.png-37a179ba7c173bd0c26a73288235b72b.ctex::
 TX Player.png::CompressedTexture2D/CompressedTexture2D::7110415748356492755::1611145296::1741326139::1::::<><><>0<>0<>b6e1cda9536cf43156aab4fea2103103<>res://.godot/imported/TX Player.png-09948f034392fcf32d9539f378378c4b.ctex::
@@ -1625,19 +1625,19 @@ Wood_Mansion_Wood.png::CompressedTexture2D/CompressedTexture2D::4369441813499508
 Wood_Mansion_Worktable.png::CompressedTexture2D/CompressedTexture2D::4288456470369392264::1647674608::1741506581::1::::<><><>0<>0<>00073bda23910d534c1e83fe0cad8e6a<>res://.godot/imported/Wood_Mansion_Worktable.png-c038bad051dc5235a290e2a8f1f866ad.ctex::
 Wood_Mansion_Worktable_Front.png::CompressedTexture2D/CompressedTexture2D::6220069609830301090::1647676712::1741506581::1::::<><><>0<>0<>328c443a5ae4fe93e29adad046eb28f1<>res://.godot/imported/Wood_Mansion_Worktable_Front.png-94f1ecb8f2d82f4dd186514e492f87e8.ctex::
 Wood_Stamp_withAxe_png.png::CompressedTexture2D/CompressedTexture2D::4189058576164319580::1663297070::1741506581::1::::<><><>0<>0<>9657c147f8e8ca45cc62f30dbed12d60<>res://.godot/imported/Wood_Stamp_withAxe_png.png-4606a758dbba2b46ab8361347aeb8d87.ctex::
-::res://Characters/::1742814050
-bolt.gd::GDScript::1172408594493560696::1742790663::0::1::::<>Area2D<><>0<>0<><>::
-bolt.tscn::PackedScene::6645488969418842085::1742814050::0::1::::<><><>0<>0<><>::uid://qx6nsnhshfwa::::res://Characters/bolt.gd<>uid://bghyy2kjlivlm::::res://Art/500 Bullet 24x24 Free/Bullet 24x24 Free  Part 1B.png
-orc_melee.gd::GDScript::1361034427364299149::1742813101::0::1::::<>CharacterBody2D<><>0<>0<><>::
-orc_melee.tscn::PackedScene::2279283432427330751::1742814050::0::1::::<><><>0<>0<><>::uid://tnkbkegx7kqv::::res://Characters/orc_melee.gd<>uid://ctkdjxsv06r1o::::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_attack/orc1_attack_full.png<>uid://riek3e51bhgh::::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_death/orc1_death_full.png<>uid://dsok3wkdninmi::::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_idle/orc1_idle_full.png<>uid://c5xoiyicdbugs::::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_walk/orc1_walk_full.png
-player_cat.gd::GDScript::4570249253593935785::1742790784::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player_cat.tscn::PackedScene::6254727463072421336::1742814050::0::1::::<><><>0<>0<><>::uid://fmcqds0lfq7w::::res://Art/CATSPRITESHEET_Orange.png<>uid://b6d4lqeriogd2::::res://Characters/player_cat.gd
-stun.gd::GDScript::6172932756263136103::1742790859::0::1::::<>Area2D<><>0<>0<><>::
-stun.tscn::PackedScene::1571092983288295838::1742814050::0::1::::<><><>0<>0<><>::uid://ct7hkhrr31u2r::::res://Characters/stun.gd<>uid://bghyy2kjlivlm::::res://Art/500 Bullet 24x24 Free/Bullet 24x24 Free  Part 1B.png
-::res://Levels/::1742851433
-enemy_spawner.gd::GDScript::333895298810779848::1742814041::0::1::::<>Node2D<><>0<>0<><>::
-enemy_spawner.tscn::PackedScene::369902527556829967::1742814050::0::1::::<><><>0<>0<><>::uid://e00hbbvgi0gy::::res://Levels/enemy_spawner.gd<>uid://7qdp2xi0pytr::::res://Characters/orc_melee.tscn<>uid://cciu4er6viqws::::res://Levels/spawn_info.gd
-game_level.tscn::PackedScene::4945112368367374504::1742851433::0::1::::<><><>0<>0<><>::uid://cvd3phketr065::::res://Characters/player_cat.tscn<>uid://dxaea2hsr6uvr::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Stone Ground.png<>uid://b27epbjhwdh5i::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Wall.png<>uid://bisyd2j3fpdij::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Struct.png<>uid://cq4puv6qm2suq::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png<>uid://c8klrj4j4q0fv::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Player.png<>uid://2s1px382815b::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant.png<>uid://b6dux17ob2o2::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Grass.png<>uid://d2tl833hk7ylp::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Shadow.png<>uid://bbvdylja0nxca::::res://Art/SYD_Main_Pack_V1/General/Tilesets/Water_Animation_Tileset.png<>uid://qnsnhj17book::::res://Art/SYD_Main_Pack_V1/General/Tilesets/Simly2D_Basic_Tileset.png<>uid://c78ixcduh1k3h::::res://Art/SYD_Main_Pack_V1/Mine/Tilesets/Mine_Tileset.png<>uid://fjgigd772ryd::::res://Levels/enemy_spawner.tscn
-label.gd::GDScript::8870957968571983243::1742790711::0::1::::<>Label<><>0<>0<><>::
-label.tscn::PackedScene::6099309283047785333::1742814050::0::1::::<><><>0<>0<><>::uid://dynfm8hrwlnb4::::res://Levels/label.gd
-spawn_info.gd::GDScript::4931000442365286894::1742616131::0::1::::Spawn_info<>Resource<><>0<>0<><>::
+::res://Characters/::1742946686
+bolt.gd::GDScript::1172408594493560696::1742887331::0::1::::<>Area2D<><>0<>0<><>::
+bolt.tscn::PackedScene::6645488969418842085::1742887513::0::1::::<><><>0<>0<><>::uid://qx6nsnhshfwa::::res://Characters/bolt.gd<>uid://bghyy2kjlivlm::::res://Art/500 Bullet 24x24 Free/Bullet 24x24 Free  Part 1B.png
+orc_melee.gd::GDScript::1361034427364299149::1742946686::0::1::::<>CharacterBody2D<><>0<>0<><>::
+orc_melee.tscn::PackedScene::2279283432427330751::1742946686::0::1::::<><><>0<>0<><>::uid://tnkbkegx7kqv::::res://Characters/orc_melee.gd<>uid://ctkdjxsv06r1o::::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_attack/orc1_attack_full.png<>uid://riek3e51bhgh::::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_death/orc1_death_full.png<>uid://dsok3wkdninmi::::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_idle/orc1_idle_full.png<>uid://c5xoiyicdbugs::::res://Art/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_walk/orc1_walk_full.png
+player_cat.gd::GDScript::4570249253593935785::1742887756::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_cat.tscn::PackedScene::6254727463072421336::1742887513::0::1::::<><><>0<>0<><>::uid://fmcqds0lfq7w::::res://Art/CATSPRITESHEET_Orange.png<>uid://b6d4lqeriogd2::::res://Characters/player_cat.gd
+stun.gd::GDScript::6172932756263136103::1742887331::0::1::::<>Area2D<><>0<>0<><>::
+stun.tscn::PackedScene::1571092983288295838::1742887513::0::1::::<><><>0<>0<><>::uid://ct7hkhrr31u2r::::res://Characters/stun.gd<>uid://bghyy2kjlivlm::::res://Art/500 Bullet 24x24 Free/Bullet 24x24 Free  Part 1B.png
+::res://Levels/::1742946686
+enemy_spawner.gd::GDScript::333895298810779848::1742887331::0::1::::<>Node2D<><>0<>0<><>::
+enemy_spawner.tscn::PackedScene::369902527556829967::1742887513::0::1::::<><><>0<>0<><>::uid://e00hbbvgi0gy::::res://Levels/enemy_spawner.gd<>uid://7qdp2xi0pytr::::res://Characters/orc_melee.tscn<>uid://cciu4er6viqws::::res://Levels/spawn_info.gd
+game_level.tscn::PackedScene::4945112368367374504::1742946686::0::1::::<><><>0<>0<><>::uid://cvd3phketr065::::res://Characters/player_cat.tscn<>uid://dxaea2hsr6uvr::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Stone Ground.png<>uid://b27epbjhwdh5i::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Wall.png<>uid://bisyd2j3fpdij::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Struct.png<>uid://cq4puv6qm2suq::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png<>uid://c8klrj4j4q0fv::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Player.png<>uid://2s1px382815b::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant.png<>uid://b6dux17ob2o2::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Grass.png<>uid://d2tl833hk7ylp::::res://Art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Shadow.png<>uid://bbvdylja0nxca::::res://Art/SYD_Main_Pack_V1/General/Tilesets/Water_Animation_Tileset.png<>uid://qnsnhj17book::::res://Art/SYD_Main_Pack_V1/General/Tilesets/Simly2D_Basic_Tileset.png<>uid://c78ixcduh1k3h::::res://Art/SYD_Main_Pack_V1/Mine/Tilesets/Mine_Tileset.png<>uid://fjgigd772ryd::::res://Levels/enemy_spawner.tscn
+label.gd::GDScript::8870957968571983243::1742887331::0::1::::<>Label<><>0<>0<><>::
+label.tscn::PackedScene::6099309283047785333::1742887513::0::1::::<><><>0<>0<><>::uid://dynfm8hrwlnb4::::res://Levels/label.gd
+spawn_info.gd::GDScript::4931000442365286894::1742887331::0::1::::Spawn_info<>Resource<><>0<>0<><>::

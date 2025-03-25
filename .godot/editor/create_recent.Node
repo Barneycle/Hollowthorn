@@ -1,10 +1,10 @@
+CollisionShape2D
+NavigationRegion2D
 Timer
 NavigationAgent2D
-CollisionShape2D
 AnimatedSprite2D
 Area2D
 RayCast2D
-NavigationRegion2D
 Label
 CharacterBody2D
 Node
