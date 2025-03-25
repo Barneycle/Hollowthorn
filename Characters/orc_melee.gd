@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends CharacterBody2D 
 
 @export var speed: float = 40
 @export var attack_range: float = 20
@@ -34,7 +34,6 @@ func _process(_delta):
 		return
 
 	if player:
-		# Continuously update the path toward the player
 		nav_agent.target_position = player.global_position
 		
 		var distance = global_position.distance_to(player.global_position)
@@ -48,31 +47,36 @@ func chase_player():
 	if attacking or knockback_timer > 0:
 		return
 
-	if player:
-		# Set target position only if the path is valid
-		if nav_agent.is_target_reachable():
-			nav_agent.target_position = player.global_position
+	if player and nav_agent.is_target_reachable():
+		nav_agent.target_position = player.global_position
 
 	var next_path_position = nav_agent.get_next_path_position()
 	if next_path_position == Vector2.ZERO:
-		return  # No valid path, do not move
+		return  
 
 	var direction = (next_path_position - global_position).normalized()
 
-	# Check if moving towards an obstacle
-	if not nav_agent.is_target_reachable():
-		velocity = Vector2.ZERO  # Stop moving if path is blocked
-	else:
-		velocity = direction * speed  # Move normally if path is clear
+	# Prevent enemies from forcing into obstacles
+	if is_about_to_collide():
+		velocity = Vector2.ZERO
+		nav_agent.target_position = player.global_position  # Recalculate path
+		return  
 
+	# **Apply separation force to prevent enemies from stopping**
+	velocity = direction * speed + get_separation_force()  
 	move_and_slide()
 
-	# Play the correct animation based on movement direction
+	# Play animation based on movement
 	if abs(direction.x) > abs(direction.y):
 		anim.play("walk_right" if direction.x > 0 else "walk_left")
 	else:
 		anim.play("walk_down" if direction.y > 0 else "walk_up")
 
+func is_about_to_collide() -> bool:
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsRayQueryParameters2D.create(global_position, nav_agent.get_next_path_position(), 1)
+	var result = space_state.intersect_ray(query)
+	return result.size() > 0  
 
 func start_attack():
 	attacking = true
@@ -170,10 +174,26 @@ func _physics_process(delta):
 
 	previous_position = global_position
 
-	# Ensure proper movement
-	if direction.length() > 0.1 and nav_agent.is_target_reachable():
-		velocity = velocity.lerp(direction * speed, 0.1)
+	# **Fix "Moonwalking" - Stop moving when no valid path**
+	if nav_agent.is_target_reachable():
+		velocity = velocity.lerp(direction * speed + get_separation_force(), 0.1)
 	else:
 		velocity = Vector2.ZERO  # Stop moving if path is blocked
 
 	move_and_slide()
+
+func get_separation_force() -> Vector2:
+	"""Prevents enemies from stopping when bumping into each other."""
+	var separation_force = Vector2.ZERO
+	var enemies = get_tree().get_nodes_in_group("enemy")
+
+	for enemy in enemies:
+		if enemy == self or enemy.dead:
+			continue
+
+		var distance = global_position.distance_to(enemy.global_position)
+		if distance < 20:  # Adjust threshold as needed
+			var repel_direction = (global_position - enemy.global_position).normalized()
+			separation_force += repel_direction * (20 - distance)  # Push away
+
+	return separation_force * 0.5  # Adjust intensity

@@ -818,11 +818,12 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a5s21"]
-radius = 7.0
+radius = 7.07107
 
 [node name="orc_melee" type="CharacterBody2D" groups=["enemies"]]
-collision_layer = 5
-collision_mask = 3
+collision_layer = 7
+collision_mask = 7
+wall_min_slide_angle = 0.0
 script = ExtResource("1_83f0i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemies", "player_cat"]]
@@ -834,7 +835,7 @@ animation = &"stun_up"
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_a5s21")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
