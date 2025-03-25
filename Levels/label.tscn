@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dynfm8hrwlnb4" path="res://Levels/label.gd" id="1_t80aa"]
 
 [sub_resource type="SystemFont" id="SystemFont_t80aa"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_t80aa"]
 font = SubResource("SystemFont_t80aa")
