@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://fjgigd772ryd"]
+
+[ext_resource type="Script" uid="uid://e00hbbvgi0gy" path="res://Levels/enemy_spawner.gd" id="1_jq70r"]
+[ext_resource type="PackedScene" uid="uid://7qdp2xi0pytr" path="res://Characters/orc_1.tscn" id="2_6et8o"]
+[ext_resource type="Script" uid="uid://cciu4er6viqws" path="res://Levels/spawn_info.gd" id="2_8ktdo"]
+[ext_resource type="PackedScene" uid="uid://bc03sho8kvmsc" path="res://Characters/orc_2.tscn" id="4_8kn7f"]
+[ext_resource type="PackedScene" uid="uid://ij85abwm5ekd" path="res://Characters/orc_3.tscn" id="5_h02g1"]
+
+[sub_resource type="Resource" id="Resource_vjnd3"]
+script = ExtResource("2_8ktdo")
+time_start = 0
+time_end = 60
+enemy = ExtResource("2_6et8o")
+enemy_2 = ExtResource("4_8kn7f")
+enemy_3 = ExtResource("5_h02g1")
+enemy_num = 1
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://cciu4er6viqws"
+
+[node name="EnemySpawner" type="Node2D" groups=["player_cat", "water_zones"]]
+script = ExtResource("1_jq70r")
+spawns = Array[ExtResource("2_8ktdo")]([SubResource("Resource_vjnd3")])
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

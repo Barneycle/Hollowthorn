@@ -2,7 +2,7 @@ extends Area2D
 
 @export var speed: float = 200
 @export var max_speed: float = 300
-@export var damage: int = 50
+@export var damage: int = 0
 @export var knockback_force: float = 50
 @export var is_dragonus: bool = false
 

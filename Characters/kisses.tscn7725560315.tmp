@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://i1eudnumd6mh"]
+
+[ext_resource type="Script" uid="uid://bt207k188cxy3" path="res://Characters/kisses.gd" id="1_srepg"]
+[ext_resource type="Texture2D" uid="uid://bsdjgcebukdvl" path="res://Art/500 Bullet 24x24 Free/Bullet 24x24 Part 7A Free.png" id="2_78u5i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_624st"]
+atlas = ExtResource("2_78u5i")
+region = Rect2(192, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxo2g"]
+atlas = ExtResource("2_78u5i")
+region = Rect2(216, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxvw7"]
+atlas = ExtResource("2_78u5i")
+region = Rect2(240, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srepg"]
+atlas = ExtResource("2_78u5i")
+region = Rect2(264, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnbd5"]
+atlas = ExtResource("2_78u5i")
+region = Rect2(288, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe8in"]
+atlas = ExtResource("2_78u5i")
+region = Rect2(312, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28m4p"]
+atlas = ExtResource("2_78u5i")
+region = Rect2(336, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4gsp"]
+atlas = ExtResource("2_78u5i")
+region = Rect2(360, 96, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jm7b2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_624st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxo2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxvw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srepg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnbd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe8in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28m4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4gsp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c4gsp"]
+radius = 11.0
+
+[node name="kisses" type="Area2D"]
+script = ExtResource("1_srepg")
+speed = null
+explosion_radius = null
+damage = null
+aoe_duration = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jm7b2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c4gsp")

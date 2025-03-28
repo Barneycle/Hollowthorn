@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://u0fv82y1arme"]
+
+[ext_resource type="Texture2D" uid="uid://brwe5uhw1pj3a" path="res://Art/500 Bullet 24x24 Free/Bullet 24x24 Part 9B Free.png" id="1_2njmo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjd8k"]
+atlas = ExtResource("1_2njmo")
+region = Rect2(192, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5iwt"]
+atlas = ExtResource("1_2njmo")
+region = Rect2(216, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04v5a"]
+atlas = ExtResource("1_2njmo")
+region = Rect2(240, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uansp"]
+atlas = ExtResource("1_2njmo")
+region = Rect2(264, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5xdg"]
+atlas = ExtResource("1_2njmo")
+region = Rect2(288, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5vv4"]
+atlas = ExtResource("1_2njmo")
+region = Rect2(312, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1uuu"]
+atlas = ExtResource("1_2njmo")
+region = Rect2(336, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7u37"]
+atlas = ExtResource("1_2njmo")
+region = Rect2(360, 96, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ftw80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjd8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5iwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04v5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uansp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5xdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5vv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1uuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7u37")
+}],
+"loop": true,
+"name": &"chain",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_06q8x"]
+radius = 12.0416
+
+[node name="chain" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ftw80")
+animation = &"chain"
+frame = 2
+frame_progress = 0.4581
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_06q8x")
