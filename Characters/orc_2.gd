@@ -24,7 +24,7 @@ var last_direction: String = "down"
 var stuck_timer = 0.0  
 var previous_position = Vector2.ZERO  
 var can_update_path = true  # Used to control pathfinding frequency
-var is_marked = false
+var marked: bool = false
 var damage_amp = 1.0
 
 func _ready():
@@ -52,14 +52,18 @@ func _on_PathUpdateTimer_timeout():
 func chase_player():
 	if attacking or knockback_timer > 0 or dead:
 		return
+	
+	if player:
+		nav_agent.target_position = player.global_position  # Reapply target
+		print_debug("📍 Updating target to:", player.global_position)
 
-	if can_update_path and player:
-		nav_agent.target_position = player.global_position  
-		can_update_path = false  # Prevent frequent path updates
-
+	# Ensure the enemy moves correctly
 	var next_position = nav_agent.get_next_path_position()
-	if next_position == Vector2.ZERO:
-		return  
+	if next_position != Vector2.ZERO:
+		var direction = (next_position - global_position).normalized()
+		velocity = velocity.lerp(direction * speed, 0.1)
+	else:
+		velocity = Vector2.ZERO
 
 	var direction = (next_position - global_position).normalized()
 
@@ -102,6 +106,7 @@ func start_attack():
 	attacking = false
 
 func die():
+	
 	if dead:
 		return
 		
@@ -112,9 +117,13 @@ func die():
 	anim.play("death_" + last_direction)
 
 	await get_tree().create_timer(1.0).timeout
+	
 	queue_free()
 
 func take_damage(amount: int, knockback: Vector2):
+	if marked:
+		amount *= damage_amp  # Apply amplified damage
+
 	if dead:
 		return
 	
@@ -123,16 +132,25 @@ func take_damage(amount: int, knockback: Vector2):
 
 	show_damage_number(amount)
 
+	# Limit knockback force
 	if knockback.length() > max_knockback_distance:
 		knockback = knockback.normalized() * max_knockback_distance
 
 	knockback_velocity = knockback  
 	knockback_timer = knockback_duration  
 
+	# Gradually reduce knockback instead of stopping instantly
+	for i in range(5):  # 5 steps of knockback reduction
+		knockback_velocity *= 0.8
+		await get_tree().create_timer(knockback_duration / 5).timeout
+
+	knockback_velocity = Vector2.ZERO  # Reset knockback
+
 	if current_hp <= 0:
 		die()
 	else:
-		chase_player()  
+		chase_player()  # Resume chasing after knockback
+
 
 func show_damage_number(amount: int):
 	var damage_number_scene = preload("res://Levels/label.tscn")
@@ -144,52 +162,52 @@ func show_damage_number(amount: int):
 	get_parent().add_child(damage_number)
 
 func stun(duration: float):
-	if dead:
+	if dead or not stun_timer:
 		return
 
-	if stun_timer:
-		stun_timer.start(duration)
-	else:
-		print_debug("⚠️ StunTimer not found!")
-
+	stun_timer.start(duration)
 	velocity = Vector2.ZERO  
-	set_physics_process(false)  # Stop physics updates
-	set_process(false)  # Stop normal updates
-	nav_agent.set_velocity(Vector2.ZERO)  # Stop navigation movement
+	set_physics_process(false)  
+	set_process(false)  
+	nav_agent.target_position = global_position  # Prevent unintended movement
 
 	anim.play("stun_" + last_direction)
 
 	await stun_timer.timeout  
+	print_debug("🟢 Stun ended!")
 
 	if not dead:
-		set_physics_process(true)  # Resume physics updates
-		set_process(true)  # Resume normal updates
-		nav_agent.target_position = player.global_position  # Force re-path
-		chase_player()  # Ensure movement resumes
+		set_physics_process(true)  
+		set_process(true)  
+
+		# ✅ Fix: Reset and Force Path Update
+		await get_tree().process_frame  # Ensure a frame passes
+		nav_agent.target_position = Vector2.ZERO  # Clear old path
+		await get_tree().process_frame  
+		nav_agent.target_position = player.global_position  # Reapply target
+
+		print_debug("🟢 Path recalculated after stun. Target:", nav_agent.target_position)
+
+		velocity = Vector2.ZERO  
+		chase_player()  # Resume chasing
 
 func _physics_process(delta):
-	
-	if not dead and not attacking and stun_timer and stun_timer.time_left == 0:
-		nav_agent.target_position = player.global_position  # Recalculate path
+	if dead or attacking or (stun_timer and stun_timer.time_left > 0):
+		return  # Don't process movement if dead, attacking, or stunned
 
-	if dead or attacking or knockback_timer > 0:
-		return
+	# Apply knockback force if active
+	if knockback_timer > 0:
+		velocity = knockback_velocity
+		knockback_timer -= delta
+	else:
+		knockback_velocity = Vector2.ZERO  # Reset knockback
 
-	if player and can_update_path:
+	# Resume normal movement after knockback
+	if knockback_timer <= 0 and player and can_update_path:
 		nav_agent.target_position = player.global_position  
 
 	var next_position = nav_agent.get_next_path_position()
 	var direction = (next_position - global_position).normalized()
-
-	if global_position.distance_to(previous_position) < 1.0:
-		stuck_timer += delta
-		if stuck_timer > 0.5:
-			velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)) * 10  
-			stuck_timer = 0.0
-	else:
-		stuck_timer = 0.0  
-
-	previous_position = global_position  
 
 	if direction.length() > 0.1 and nav_agent.is_target_reachable():
 		velocity = velocity.lerp(direction * speed, 0.1)
@@ -197,16 +215,26 @@ func _physics_process(delta):
 		velocity = Vector2.ZERO  
 
 	move_and_slide()
-	update_animation(direction)
 
+	update_animation(direction)
+	
 func apply_mark(amp, duration):
-	is_marked = true
+	marked = true
 	damage_amp = 1.0 + amp
 	
 	var mark = preload("res://Characters/mark_effect.tscn").instantiate()
 	add_child(mark)
 	
 	await get_tree().create_timer(duration).timeout
-	is_marked = false
+	marked = false
 	damage_amp = 1.0
 	mark.queue_free()
+
+var slow_modifier: float = 1.0
+
+func apply_slow(factor: float, duration: float):
+	slow_modifier = factor
+	speed *= factor  # Reduce speed
+	await get_tree().create_timer(duration).timeout
+	speed /= factor  # Reset speed
+	slow_modifier = 1.0

@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=3 uid="uid://ces3mbsubof16"]
+
+[ext_resource type="Texture2D" uid="uid://du170j70hcyyi" path="res://Art/500 Bullet 24x24 Free/Bullet 24x24 Part 7C Free.png" id="1_7bo3h"]
+[ext_resource type="Script" uid="uid://bdndm607dswm1" path="res://Characters/laguna.gd" id="1_rv4gs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv4gs"]
+atlas = ExtResource("1_7bo3h")
+region = Rect2(192, 312, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnoh3"]
+atlas = ExtResource("1_7bo3h")
+region = Rect2(216, 312, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25hxb"]
+atlas = ExtResource("1_7bo3h")
+region = Rect2(240, 312, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f2ea"]
+atlas = ExtResource("1_7bo3h")
+region = Rect2(264, 312, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_noi2w"]
+atlas = ExtResource("1_7bo3h")
+region = Rect2(288, 312, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_873my"]
+atlas = ExtResource("1_7bo3h")
+region = Rect2(312, 312, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hwas"]
+atlas = ExtResource("1_7bo3h")
+region = Rect2(336, 312, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dq7f"]
+atlas = ExtResource("1_7bo3h")
+region = Rect2(360, 312, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tn5sv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv4gs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnoh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25hxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f2ea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_noi2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_873my")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hwas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dq7f")
+}],
+"loop": true,
+"name": &"laguna",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7df7q"]
+radius = 9.05539
+
+[node name="laguna" type="Area2D"]
+script = ExtResource("1_rv4gs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tn5sv")
+animation = &"laguna"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7df7q")

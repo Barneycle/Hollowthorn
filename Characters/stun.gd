@@ -2,7 +2,7 @@ extends Area2D
 
 @export var speed: float = 200
 @export var max_speed: float = 300
-@export var damage: int = 10
+@export var damage: int = 0
 @export var stun_duration: float = 0.5
 @export var is_dragonus: bool = false
 @export var bounce_count: int = 1  # Number of times it can split
@@ -43,17 +43,16 @@ func _on_body_entered(body):
 		queue_free()
 
 func spawn_extra_projectile():
-	var projectile_scene = preload("res://Characters/stun.tscn")  # ✅ Ensure correct path!
+	
+	var projectile_scene = preload("res://Characters/stun.tscn")
 	var extra_projectile = projectile_scene.instantiate()
 
-	extra_projectile.global_position = global_position + (direction * 10)  # ✅ Small offset
+	extra_projectile.global_position = global_position + (direction * 10)
 	extra_projectile.damage = damage
 	extra_projectile.stun_duration = stun_duration
 	extra_projectile.direction = direction.rotated(deg_to_rad(10))
 	extra_projectile.is_dragonus = false
-	extra_projectile.bounce_count = bounce_count  # ✅ Ensure it inherits bounce count
-	extra_projectile.speed = speed  # ✅ Ensure speed is inherited
-
+	
 	get_tree().current_scene.call_deferred("add_child", extra_projectile)
 
 func spawn_bouncing_projectiles():
@@ -70,3 +69,6 @@ func spawn_bouncing_projectiles():
 		new_projectile.speed = speed  # ✅ Ensure new projectiles have speed
 
 		get_tree().current_scene.call_deferred("add_child", new_projectile)
+
+func set_direction(new_direction: Vector2):
+	direction = new_direction.normalized()

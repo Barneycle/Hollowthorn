@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-AnimatedSprite2D
-Sprite2D
-=======
-Node
->>>>>>> 262d5a8c417c640598fd1dd722b563bbf7f5b9ce
 CollisionShape2D
+AnimatedSprite2D
 Area2D
+Sprite2D
+Node
 VisibleOnScreenNotifier2D
 Timer
 NavigationAgent2D
@@ -15,12 +12,3 @@ RigidBody2D
 NavigationRegion2D
 RayCast2D
 Label
-<<<<<<< HEAD
-Node
-=======
-CharacterBody2D
-AnimationPlayer
-Sprite2D
-Marker2D
-AnimationTree
->>>>>>> 262d5a8c417c640598fd1dd722b563bbf7f5b9ce
