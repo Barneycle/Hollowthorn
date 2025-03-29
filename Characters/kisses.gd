@@ -2,10 +2,11 @@ extends Area2D
 
 @export var speed: float = 200
 @export var max_speed: float = 300
-@export var damage: int = 0
-@export var knockback_force: float = 50
-@export var explosion_radius: float = 80  # AoE damage radius
+@export var damage: int = 48  # Max level: 48 magic damage
+@export var explosion_radius: float = 380  # Max level: Radius 380 (Base 300 + 10*8)
 @export var aoe_duration: float = 3.0  # Time AoE lingers
+@export var projectile_count: int = 9  # Max level: 9 projectiles
+@export var cooldown: float = 2.5  # Max level: Cooldown 2.5s (Base 5 - 0.5*8)
 @export var is_dragonus: bool = false
 
 var direction: Vector2 = Vector2.ZERO
@@ -19,40 +20,46 @@ func _ready():
 	connect("body_entered", _on_body_entered)
 
 	if is_dragonus:
-		spawn_extra_projectile()
+		spawn_extra_projectiles()
 
 func _process(delta):
 	global_position += direction * speed * delta
 	
+	# Collision check using Area2D's physics
 	var space_state = get_world_2d().direct_space_state
-	var query = PhysicsRayQueryParameters2D.create(global_position, global_position + direction * speed * delta)
-	var result = space_state.intersect_ray(query)
-	
-	if result and result.collider.is_in_group("walls"):
+	var query = PhysicsPointQueryParameters2D.new()
+	query.position = global_position
+	query.collision_mask = collision_layer  # Ensure it checks the right layers
+
+	var result = space_state.intersect_point(query)
+	if result:
 		explode()
-		
-func spawn_extra_projectile():
+
+
+func spawn_extra_projectiles():
 	var projectile_scene = preload("res://Characters/kisses.tscn")
-	var extra_projectile = projectile_scene.instantiate()
-	
-	extra_projectile.global_position = global_position + (direction * 10)
-	extra_projectile.damage = damage
-	extra_projectile.speed = speed
-	extra_projectile.is_dragonus = false
-	
-	extra_projectile.set_direction(direction.rotated(deg_to_rad(10)))  
-	get_tree().current_scene.call_deferred("add_child", extra_projectile)
+	var total_projectiles = projectile_count + (1 if name == "PlayerCat" else 0)  # PlayerCat gets 10 total
+
+	for i in range(total_projectiles):
+		var angle = (2 * PI / total_projectiles) * i  # Circular pattern
+		var new_direction = Vector2.RIGHT.rotated(angle)  # Get direction
+
+		var extra_projectile = projectile_scene.instantiate()
+		extra_projectile.global_position = global_position + (new_direction * 20)  # Offset from center
+		extra_projectile.set_direction(new_direction)
+		extra_projectile.damage = damage
+		extra_projectile.explosion_radius = explosion_radius
+
+		get_tree().current_scene.call_deferred("add_child", extra_projectile)
 
 func set_direction(new_direction: Vector2):
 	direction = new_direction.normalized()
 
 func _on_body_entered(body):
 	if body.is_in_group("enemies"):
-		var knockback_direction = (body.global_position - global_position).normalized()
-		body.take_damage(damage, knockback_direction * knockback_force)  
+		body.take_damage(damage, Vector2.ZERO)  # No knockback
 		explode()
-	elif body.is_in_group("walls") or body.is_in_group("obstacles"):
-		explode()
+
 
 func explode():
 	var explosion_scene = preload("res://Characters/explosion.tscn")
@@ -77,6 +84,4 @@ func apply_aoe_damage():
 
 		if enemy.global_position.distance_to(global_position) <= explosion_radius:
 			if enemy.has_method("take_damage"):
-				var knockback_direction = (enemy.global_position - global_position).normalized()
-				var aoe_knockback = knockback_direction * (knockback_force / 2)
-				enemy.take_damage(damage / 2, aoe_knockback)
+				enemy.take_damage(damage / 2, Vector2.ZERO)  # No knockback

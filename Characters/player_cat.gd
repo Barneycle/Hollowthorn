@@ -67,6 +67,22 @@ func shoot():
 	#await get_tree().create_timer(0.5).timeout
 	#cast_laguna()
 
+func find_nearest_enemy() -> Node2D:
+	
+	var nearest_enemy = null
+	var min_distance = INF
+
+	for enemy in get_tree().get_nodes_in_group("enemies"):
+		if not enemy is Node2D:
+			continue
+
+		var distance = global_position.distance_to(enemy.global_position)
+		if distance < min_distance:
+			min_distance = distance
+			nearest_enemy = enemy
+
+	return nearest_enemy
+
 func cast_bolt():
 	
 	var projectile_scene = load("res://Characters/bolt.tscn")
@@ -97,23 +113,8 @@ func cast_stun():
 
 		get_tree().current_scene.add_child(projectile)
 
-
-func find_nearest_enemy() -> Node2D:
-	var nearest_enemy = null
-	var min_distance = INF
-
-	for enemy in get_tree().get_nodes_in_group("enemies"):
-		if not enemy is Node2D:
-			continue
-
-		var distance = global_position.distance_to(enemy.global_position)
-		if distance < min_distance:
-			min_distance = distance
-			nearest_enemy = enemy
-
-	return nearest_enemy
-
 func cast_kisses():
+	
 	var nearest_enemy = find_nearest_enemy()
 	if not nearest_enemy:
 		return
