@@ -25,3 +25,4 @@ res://Characters/stun.gd
 res://Levels/label.tscn
 res://Characters/laguna.tscn
 res://Characters/laguna.gd
+res://Levels/enemy_spawner.tscn

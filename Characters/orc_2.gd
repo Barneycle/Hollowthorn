@@ -32,9 +32,6 @@ func _ready():
 	path_timer.start()  # Start the timer to update pathfinding every 0.5s
 	path_timer.timeout.connect(_on_PathUpdateTimer_timeout)
 
-	if not player:
-		print_debug("⚠️ Player (player_cat) not found!")
-
 func _process(_delta):
 	if not notifier.is_on_screen() or dead or attacking or knockback_timer > 0:
 		return  # Skip updates if off-screen, dead, attacking, or knocked back
@@ -55,7 +52,6 @@ func chase_player():
 	
 	if player:
 		nav_agent.target_position = player.global_position  # Reapply target
-		print_debug("📍 Updating target to:", player.global_position)
 
 	# Ensure the enemy moves correctly
 	var next_position = nav_agent.get_next_path_position()
@@ -106,7 +102,6 @@ func start_attack():
 	attacking = false
 
 func die():
-	
 	if dead:
 		return
 		
@@ -128,7 +123,6 @@ func take_damage(amount: int, knockback: Vector2):
 		return
 	
 	current_hp -= amount
-	print("Enemy HP:", current_hp)
 
 	show_damage_number(amount)
 
@@ -150,7 +144,6 @@ func take_damage(amount: int, knockback: Vector2):
 		die()
 	else:
 		chase_player()  # Resume chasing after knockback
-
 
 func show_damage_number(amount: int):
 	var damage_number_scene = preload("res://Levels/label.tscn")
@@ -174,7 +167,6 @@ func stun(duration: float):
 	anim.play("stun_" + last_direction)
 
 	await stun_timer.timeout  
-	print_debug("🟢 Stun ended!")
 
 	if not dead:
 		set_physics_process(true)  
@@ -185,8 +177,6 @@ func stun(duration: float):
 		nav_agent.target_position = Vector2.ZERO  # Clear old path
 		await get_tree().process_frame  
 		nav_agent.target_position = player.global_position  # Reapply target
-
-		print_debug("🟢 Path recalculated after stun. Target:", nav_agent.target_position)
 
 		velocity = Vector2.ZERO  
 		chase_player()  # Resume chasing

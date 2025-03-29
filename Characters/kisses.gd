@@ -22,10 +22,8 @@ func _ready():
 		spawn_extra_projectile()
 
 func _process(delta):
-	# Move the projectile forward
 	global_position += direction * speed * delta
 	
-	# Raycast for walls
 	var space_state = get_world_2d().direct_space_state
 	var query = PhysicsRayQueryParameters2D.create(global_position, global_position + direction * speed * delta)
 	var result = space_state.intersect_ray(query)
@@ -34,23 +32,18 @@ func _process(delta):
 		explode()
 		
 func spawn_extra_projectile():
-	var projectile_scene = preload("res://Characters/kisses.tscn")  # ✅ Ensure correct path!
-	var extra_projectile = projectile_scene.instantiate()  # ✅ Correct method for Godot 4
+	var projectile_scene = preload("res://Characters/kisses.tscn")
+	var extra_projectile = projectile_scene.instantiate()
 	
-	extra_projectile.global_position = global_position + (direction * 10)  # ✅ Small offset to avoid instant collision
+	extra_projectile.global_position = global_position + (direction * 10)
 	extra_projectile.damage = damage
-	extra_projectile.speed = speed  # ✅ Ensure speed is inherited
+	extra_projectile.speed = speed
 	extra_projectile.is_dragonus = false
 	
-	# ✅ Ensure it moves by setting direction properly
 	extra_projectile.set_direction(direction.rotated(deg_to_rad(10)))  
-
-	# ✅ Correctly add to scene
 	get_tree().current_scene.call_deferred("add_child", extra_projectile)
 
-
 func set_direction(new_direction: Vector2):
-
 	direction = new_direction.normalized()
 
 func _on_body_entered(body):
@@ -62,35 +55,28 @@ func _on_body_entered(body):
 		explode()
 
 func explode():
-	# Spawn explosion effect
-	var explosion_scene = preload("res://Characters/explosion.tscn")  # Ensure this path is correct
+	var explosion_scene = preload("res://Characters/explosion.tscn")
 	var explosion = explosion_scene.instantiate()
 	explosion.global_position = global_position
 	get_tree().current_scene.call_deferred("add_child", explosion)
 
-	# Apply AoE damage over time
-	explosion_timer.start(aoe_duration)  # Start the lingering effect
+	explosion_timer.start(aoe_duration)
 	apply_aoe_damage()
 
-	# Destroy the projectile immediately
-	queue_free()  # ✅ Now the projectile disappears upon explosion
+	queue_free()
 
 func _on_explosion_timer_timeout():
-	queue_free()  # Remove projectile after AoE duration
+	queue_free()
 
 func apply_aoe_damage():
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	
 	for enemy in enemies:
-		# ✅ Ensure 'enemy' is a valid Node2D with global_position
 		if not enemy or not enemy is Node2D:
-			print("⚠️ ERROR: Invalid enemy in 'enemies' group:", enemy)
-			continue  # Skip invalid objects
+			continue  
 
-		# ✅ Check if enemy is within the explosion radius
 		if enemy.global_position.distance_to(global_position) <= explosion_radius:
 			if enemy.has_method("take_damage"):
 				var knockback_direction = (enemy.global_position - global_position).normalized()
-				var aoe_knockback = knockback_direction * (knockback_force / 2)  # Reduced knockback for AoE
-				enemy.take_damage(damage / 2, aoe_knockback)  # ✅ Apply AoE damage
-				print("🔥 AoE damage applied to:", enemy.name)
+				var aoe_knockback = knockback_direction * (knockback_force / 2)
+				enemy.take_damage(damage / 2, aoe_knockback)
