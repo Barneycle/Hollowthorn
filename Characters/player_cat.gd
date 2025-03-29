@@ -55,13 +55,13 @@ func pick_new_state():
 
 func shoot():
 	
-	cast_bolt()
-	await get_tree().create_timer(0.5).timeout
-	cast_stun()
+	#cast_bolt()
+	#await get_tree().create_timer(0.5).timeout
+	#cast_stun()
 	#await get_tree().create_timer(0.5).timeout
 	#cast_track()
 	#await get_tree().create_timer(0.5).timeout
-	#cast_kisses()
+	cast_kisses()
 	#await get_tree().create_timer(0.5).timeout
 	#cast_chain()
 	#await get_tree().create_timer(0.5).timeout
@@ -84,7 +84,10 @@ func find_nearest_enemy() -> Node2D:
 	return nearest_enemy
 
 func cast_bolt():
-	
+	var nearest_enemy = find_nearest_enemy()
+	if not nearest_enemy:
+		return  # No enemies, don't cast
+
 	var projectile_scene = load("res://Characters/bolt.tscn")
 	var total_projectiles = projectile_count + (1 if name == "PlayerCat" else 0)
 
@@ -99,9 +102,12 @@ func cast_bolt():
 		get_tree().current_scene.add_child(projectile)
 
 func cast_stun():
-	
+	var nearest_enemy = find_nearest_enemy()
+	if not nearest_enemy:
+		return  # No enemies, don't cast
+
 	var projectile_scene = load("res://Characters/stun.tscn")
-	var total_projectiles = projectile_count + (1 if name == "PlayerCat" else 0)
+	var total_projectiles = 6 
 
 	for i in range(total_projectiles):
 		var angle = (2 * PI / total_projectiles) * i
@@ -114,28 +120,24 @@ func cast_stun():
 		get_tree().current_scene.add_child(projectile)
 
 func cast_kisses():
-	
 	var nearest_enemy = find_nearest_enemy()
 	if not nearest_enemy:
 		return
 
 	var projectile_scene = load("res://Characters/kisses.tscn")
-	var projectile = projectile_scene.instantiate()
+	var total_projectiles = projectile_count + (1 if name == "PlayerCat" else 0)  # Add extra for PlayerCat
 
-	var direction = (nearest_enemy.global_position - global_position).normalized()
-	projectile.global_position = global_position
-	projectile.set_direction(direction)
+	for i in range(total_projectiles):
+		var angle = (2 * PI / total_projectiles) * i
+		var new_direction = Vector2.RIGHT.rotated(angle)
 
-	get_tree().current_scene.add_child(projectile)
-	
-	if name == "PlayerCat" and extra_projectiles > 0:
-		for i in range(extra_projectiles):
-			var spread_offset = spread_angle * ((i + 1) / 2) * (-1 if i % 2 == 0 else 1)
-			var new_direction = direction.rotated(deg_to_rad(spread_offset))
-			var extra_projectile = projectile_scene.instantiate()
-			extra_projectile.set_direction(new_direction)
-			extra_projectile.global_position = global_position
-			get_tree().current_scene.add_child(extra_projectile)
+		var projectile = projectile_scene.instantiate()
+		projectile.global_position = global_position + (new_direction * 20)
+		projectile.set_direction(new_direction)
+
+		get_tree().current_scene.call_deferred("add_child", projectile)
+
+
 
 func find_strongest_enemy(range: float) -> Node2D:
 	var enemies = get_tree().get_nodes_in_group("enemies")

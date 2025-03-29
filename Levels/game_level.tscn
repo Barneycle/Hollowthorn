@@ -3328,7 +3328,7 @@ script = null
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8, -208)
 ignore_rotation = false
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(0.3, 0.3)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("13_ds5vk")]
 

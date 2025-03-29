@@ -86,8 +86,6 @@ animations = [{
 radius = 24.0
 
 [node name="explosion" type="Area2D"]
-collision_layer = 8
-collision_mask = 8
 script = ExtResource("1_dl6l2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var attack_delay: float = 0.5
 @export var max_hp: int = 100
 @export var friction: float = 5.0  
-@export var max_knockback_distance: float = 50
+@export var max_knockback_distance: float = 100
 @export var knockback_duration: float = 0.2
 
 @onready var anim = $AnimatedSprite2D
